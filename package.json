@@ -1,0 +1,52 @@
+{
+  "name": "@rehan-h/jsx-anatomy-validator",
+  "version": "0.1.1",
+  "description": "Validate JSX component structure, hierarchy, props, and children",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun run build:js && bun run build:types",
+    "build:js": "bun build ./src/index.ts --outdir ./dist --target node",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir ./dist",
+    "prepublishOnly": "bun run build",
+    "dev": "bun --watch index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "jsx",
+    "validator",
+    "react",
+    "component",
+    "structure",
+    "anatomy",
+    "testing"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/jsx-anatomy-validator"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.28.5"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.28.5",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
