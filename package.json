@@ -1,6 +1,6 @@
 {
   "name": "@rehan-h/jsx-anatomy-validator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Validate JSX component structure, hierarchy, props, and children",
   "type": "module",
   "main": "./dist/index.js",
